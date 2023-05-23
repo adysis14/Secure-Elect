@@ -32,7 +32,7 @@ recaptchaVerifier.render().then(function (widgetId) {
 })
 
 var aadhaar_no_phone_no = {
-  "7382537xxxxx": "915801xxxx",
+  "73825370001": "915801xxxx",
   681698110987: "9075339422",
 }
 
