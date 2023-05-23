@@ -122,11 +122,7 @@ user interface and high security.
 
 ## Authors
 
-* **Sanat Taori**
-* **Akshay Motghare**
-* **Mandar Patil** 
-* **Aniket Narkhede**
+* **Aadya Singh**
+* **Sakshi Singh**
+* **Akanksha Singh** 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
