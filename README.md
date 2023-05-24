@@ -56,7 +56,7 @@ After writing our smart contract, we'll use Web3js to deploy our app and interac
 ```
 $ node
 > Web3 = require('web3')
-> web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+> web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); #domain mentioned here and in few other files must be same as the bind address
 Then ensure Web3js is initalized and can query all accounts on the blockchain
 
 > web3.eth.accounts
