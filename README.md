@@ -1,6 +1,6 @@
 # Secure-Elect
-Aadhaar Based voting system using blockchain technology
-Project implemented as part of our final year major project at BBDEC
+Aadhaar Based voting system using blockchain technology.
+ Project implemented as part of our final year major project at BBDEC.
 
 ## Description
 
