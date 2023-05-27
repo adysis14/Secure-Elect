@@ -7,14 +7,14 @@ $(document).ready(async function () {
   // 	console.log('done');
   // });
 
-  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"))
+  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
   abi = JSON.parse(
     '[{"constant":false,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"totalVotesFor","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"validCandidate","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"votesReceived","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"candidateList","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"voteForCandidate","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"candidateNames","type":"bytes32[]"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}] '
   )
   const accounts = await web3.eth.getAccounts()
   VotingContract = new web3.eth.Contract(
     abi,
-    "0x48080b00e1c4e9076c907c7e2259297aaa76bc73"
+    "0x7743b744463A293FDeCCB9899498c396A1Ae2874"
   )
   // console.log(VotingContract)
   contractInstance = VotingContract.methods

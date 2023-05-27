@@ -21,7 +21,7 @@ window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier("getotp", {
   size: "invisible",
   callback: function (response) {
     // reCAPTCHA solved, allow signInWithPhoneNumber.
-    //onSignInSubmit();
+    onSignInSubmit();
   },
 })
 // [END appVerifier]
@@ -34,6 +34,7 @@ recaptchaVerifier.render().then(function (widgetId) {
 var aadhaar_no_phone_no = {
   "73825370001": "915801xxxx",
   681698110987: "9075339422",
+  426472598581: "6307220658",
 }
 
 function onSignInSubmit() {

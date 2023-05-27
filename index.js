@@ -83,8 +83,8 @@ app.get("/info", function (req, res) {
   ) {
     res.redirect("/app")
   } else {
-    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"))
-    code = fs.readFileSync("Voting.sol").toString()
+    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
+    code = fs.readFileSync("voting.sol").toString()
 
     compiledCode = solc.compile(code)
     abiDefinition = JSON.parse(compiledCode.contracts[":Voting"].interface)
@@ -92,7 +92,7 @@ app.get("/info", function (req, res) {
     byteCode = compiledCode.contracts[":Voting"].bytecode
     deployedContract = VotingContract.new(
       ["Sanat", "Aniket", "Mandar", "Akshay"],
-      { data: byteCode, from: web3.eth.accounts[0], gas: 4700000 },
+      { data: byteCode, from: web3.eth.getAccounts[0], gas: 4700000 },
       (err, contract) => {
         console.log("Deployed Contract Address:", contract.address)
       }

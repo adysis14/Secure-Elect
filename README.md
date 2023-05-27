@@ -59,10 +59,10 @@ $ node
 > web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); #domain mentioned here and in few other files must be same as the bind address
 Then ensure Web3js is initalized and can query all accounts on the blockchain
 
-> web3.eth.accounts
-Lastly, compile the contract by loading the code from Voting.sol in to a string variable and compiling it
+> web3.eth.getAccounts
+Lastly, compile the contract by loading the code from voting.sol in to a string variable and compiling it
 
-> code = fs.readFileSync('Voting.sol').toString()
+> code = fs.readFileSync('voting.sol').toString()
 > solc = require('solc')
 > compiledCode = solc.compile(code)
 ```
@@ -76,7 +76,7 @@ compiledCode.contracts[‘:Voting’].interface: interface of the contract (call
 > abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface)
 > VotingContract = web3.eth.contract(abiDefinition)
 > byteCode = compiledCode.contracts[':Voting'].bytecode
->deployedContract = VotingContract.new(['Sanat','Aniket','Mandar','Akshay'],{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
+>deployedContract = VotingContract.new(['Sanat','Aniket','Mandar','Akshay'],{data: byteCode, from: web3.eth.getAccounts[0], gas: 4700000})
 > deployedContract.address
 > contractInstance = VotingContract.at(deployedContract.address)
 deployedContract.address. When you have to interact with your contract, you need this deployed address and abi definition we talked about earlier.
