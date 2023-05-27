@@ -1,6 +1,6 @@
-# Aadhaar Voting
-Aadhaar Based voting system using blockchain technology
-Project implemented as part of Rajasthan Hackathron
+# Secure-Elect
+Aadhaar Based voting system using blockchain technology.
+ Project implemented as part of our final year major project at BBDEC.
 
 ## Description
 
